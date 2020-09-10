@@ -1,0 +1,39 @@
+kubectl version --short --client
+aws eks --region us-east--1 update-kubeconfig --name CLUSTERNAME  --profile profilename
+kubectl get svc
+kubectl get nodes
+kubectl get namespaces
+kubectl get pods
+kubectl get services
+kubectl get ns
+kubectl get secrets
+helm repo update
+helm repo add nameoftherepo artifactoryurl --username USERNAME --password='PASSWORD'
+helm upgrade --install nameofthehelm --namespace nameofthespace -f yamlfilename chartname
+kubectl describe svc -n namespacename particularresource
+helm ls -n namespacename
+helm delete -n namespacename
+kubectl get svc -n namespacename
+kubectl get pod -n namespacename
+kubectl get nodes
+kubectl describe node nodename
+kubectl get nodes -o wide
+kubectl describe node | grep medi
+kubectl get pvc -n namespacename
+kubectl patch storageclass gp2 -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
+kubectl patch storageclass -p   then some commands
+helm list --namespace namespacename
+helm delete helmname --namespace namespacename
+helm ls
+helm ls -n namespacename
+helm delete helpmname -n namespacename
+kubectl delete pvc listofpvcnames
+kuectl describe pvc pvcname -n namespacename
+kubectl get ev
+helm upgrade --install helmname --namespace namespacename -f yamlfile charname --set someservicename.persistence.storageClass=standard
+kubectl get sc gp2 -o yaml > gp2-sc.yaml
+kubectl get pv
+kubectl describe pv pvname
+kubect get po
+kubectl describe po podname -n namespacename
+
